@@ -4,13 +4,13 @@ import { useRouter } from "next/navigation";
 import MenuList from "./menu-list";
 import ItemsMenuMobile from "./items-menu-mobile";
 import ToggleTheme from "./toggle-theme";
-// import { useCart } from "@/hooks/use-cart";
-// import { useLovedProducts } from "@/hooks/use-loved-products";
+import { useCart } from "@/hooks/use-cart";
+import { useLovedProducts } from "@/hooks/use-loved-products";
 
 const Navbar = () => {
     const router = useRouter()
-    // const cart = useCart()
-    // const { lovedItems } = useLovedProducts()
+    const cart = useCart()
+    const { lovedItems } = useLovedProducts()
 
     return (
         <div className="flex items-center justify-between p-4 mx-auto cursor-pointer sm:max-w-4xl md:max-w-6xl">
@@ -24,11 +24,7 @@ const Navbar = () => {
                 <ItemsMenuMobile />
             </div>
             <div className="flex items-center justify-between gap-2 sm:gap-7">
-            <ShoppingCart strokeWidth="1"
-                        className="cursor-pointer"
-                        onClick={() => router.push("/cart")}
-                    />
-                {/* {cart.items.length === 0 ?
+                {cart.items.length === 0 ?
                     <ShoppingCart strokeWidth="1"
                         className="cursor-pointer"
                         onClick={() => router.push("/cart")}
@@ -38,12 +34,12 @@ const Navbar = () => {
                             <BaggageClaim strokeWidth={1} className="cursor-pointer" />
                             <span>{cart.items.length}</span>
                         </div>
-                    )} */}
+                    )}
 
 
                 <Heart
                     strokeWidth="1"
-                    // className={`cursor-pointer ${lovedItems.length > 0 && 'fill-black dark:fill-white'}`}
+                    className={`cursor-pointer ${lovedItems.length > 0 && 'fill-black dark:fill-white'}`}
                     onClick={() => router.push("/loved-products")} />
 
                 <User strokeWidth={1} className="cursor-pointer" />
