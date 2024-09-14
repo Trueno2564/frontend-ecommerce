@@ -37,7 +37,7 @@ const FeaturedProducts = () => {
                     <Card className="py-4 border border-gray-200 shadow-none">
                       <CardContent className="relative flex items-center justify-center px-6 py-2">
                         <img
-                          src={images.data[0].attributes.url}
+                          src={`${'https://backend-ecommerce-pcu8.onrender.com'}${images.data[0].attributes.url}`}
                           alt="Image featured"
                           className="w-full h-[300px]"
                         />

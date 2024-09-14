@@ -27,7 +27,7 @@ const LovedItemProduct = (props: LovedItemProductProps) => {
     return (
         <li className="flex flex-row p-6 border-b justify-between">
             <div className="w-[150px] mr-5">
-                <ProductImageMinuature slug={product.attributes.slug} url={`${'http://localhost:1337'}${product.attributes.images.data[0].attributes.url}`}/>
+                <ProductImageMinuature slug={product.attributes.slug} url={`${'https://backend-ecommerce-pcu8.onrender.com'}${product.attributes.images.data[0].attributes.url}`}/>
             </div>
 
             <div className="flex justify-between flex-1">
