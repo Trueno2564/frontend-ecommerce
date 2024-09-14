@@ -15,7 +15,7 @@ export default function Page() {
   const stripePromise = loadStripe(
     process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY || ""
   );
-  // console.log('key = '+process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY)
+  console.log(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY)
 
   const buyStripe = async () => {
     removeAll();
