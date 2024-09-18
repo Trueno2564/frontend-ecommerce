@@ -37,7 +37,7 @@ const FeaturedProducts = () => {
                     <Card className="py-4 border border-gray-200 shadow-none">
                       <CardContent className="relative flex items-center justify-center px-6 py-2">
                         <img
-                          src={`${'https://backend-ecommerce-pcu8.onrender.com'}${images.data[0].attributes.url}`}
+                          src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${images.data[0].attributes.url}`}
                           alt="Image featured"
                           className="w-full h-[300px]"
                         />
@@ -59,10 +59,10 @@ const FeaturedProducts = () => {
                       <div className="flex justify-between gap-4 px-8">
                         <h3 className="text-lg font-bold">{productName}</h3>
                         <div className="flex items-center justify-between gap-3">
-                          <p className="px-2 py-1 text-white bg-black rounded-full dark:bg-white dark:text-black w-fit">
+                          <p className="px-2 py-1 text-sm text-white bg-black rounded-full dark:bg-white dark:text-black w-fit">
                             {taste}
                           </p>
-                          <p className="px-2 py-1 text-white bg-primary rounded-full w-fit">
+                          <p className="px-2 py-1 text-sm text-white bg-primary rounded-full w-fit">
                             {origin}
                           </p>
                         </div>

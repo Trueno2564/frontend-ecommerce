@@ -12,7 +12,8 @@ import { useState } from "react";
 export default function Page() {
   const params = useParams();
   const { categorySlug } = params;
-  const { result, loading }: ResponseType = useGetCategoryProduct(categorySlug);
+  const { result, loading }: ResponseType = useGetCategoryProduct('capsula');
+  console.log(result)
   const [filterOrigin, setFilterOrigin] = useState("");
 
   const filteredProducts =

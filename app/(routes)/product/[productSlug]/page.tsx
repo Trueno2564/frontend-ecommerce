@@ -23,7 +23,7 @@ export default function Page() {
     return (
         <div className="max-w-6xl py-4 px-6 mx-auto sm:py-32 sm:px-24 lg:min-h-[80vh] w-full">
             <div className="grid sm:grid-cols-2">
-                <div m-6>
+                <div className="m-6">
                     <CarouselProduct images={result[0].attributes.images}  />
                 </div>
 

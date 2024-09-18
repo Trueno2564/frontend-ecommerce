@@ -6,6 +6,7 @@ export function useGetProductField() {
     const [result, setResult] = useState<ResultFilterTypes | null>(null)
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState('')
+    console.log(url)
 
     useEffect(() => {
         (async () => {

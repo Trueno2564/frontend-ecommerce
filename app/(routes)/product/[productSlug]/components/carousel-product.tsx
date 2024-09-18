@@ -28,7 +28,7 @@ const CarouselProduct = (props: CarouselProductProps) => {
           {images.data.map((image) => (
             <CarouselItem key={image.id}>
               <img
-                src={`${'https://backend-ecommerce-pcu8.onrender.com'}${image.attributes.url}`}
+                src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${image.attributes.url}`}
                 alt="Image product"
                 className="rounded-lg"
               />
